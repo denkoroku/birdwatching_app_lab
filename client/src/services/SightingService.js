@@ -4,5 +4,11 @@ export default {
   getSightings(){
     return fetch(baseURL)
     .then(res => res.json())
+  },
+
+  deleteSighting(id){
+    return fetch(baseURL + id {
+      method: 'DELETE'
+    })
   }
 }
