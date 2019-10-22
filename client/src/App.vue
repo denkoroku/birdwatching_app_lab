@@ -27,6 +27,9 @@ export default {
     eventBus.$on('sighting-added', (newSighting) => {
       this.sightings.push(newSighting)
     });
+    eventBus.$on('sighting-deleted', (index) => {
+      this.sightings.splice(index, 1)
+    })
   },
   methods: {
     fetchData(){
