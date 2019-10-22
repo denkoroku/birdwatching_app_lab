@@ -24,6 +24,9 @@ export default {
   },
   mounted(){
     this.fetchData();
+    eventBus.$on('sighting-added', (newSighting) => {
+      this.sightings.push(newSighting)
+    });
   },
   methods: {
     fetchData(){
